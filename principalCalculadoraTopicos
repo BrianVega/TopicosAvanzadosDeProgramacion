@@ -1,0 +1,8 @@
+public class principalCalculadoraTopicos{
+	public static void main(String args[]){
+   
+		calculadoraTopicos acceder = new calculadoraTopicos();
+	   acceder.setVisible(true);
+	
+   }//main
+}//class
