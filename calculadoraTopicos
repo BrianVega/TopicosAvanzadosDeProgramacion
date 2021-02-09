@@ -1,0 +1,71 @@
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.applet.*;
+
+
+public /*abstract*/ class calculadoraTopicos extends JFrame implements ActionListener {
+   
+   private JButton botonSuma, botonResta, botonMulti, botonDivi, botonLimpiar, botonSalir;
+   private JTextField num1, num2, resultado;
+   JLabel label1, label2;
+      public static void main(String[]Args){
+      calculadoraTopicos();
+   }
+   
+   public calculadoraTopicos(){
+      super("~.~.~ Calculadora ~.~.~");
+      setSize(380, 200);
+      setLocationRelativeTo(null);
+      interfaz();//Ejecutar método interfaz
+      //setVisible(true);
+   }//Constructor
+   
+   
+   
+   public void interfaz(){
+   //Creación del container y sus objetos
+      Container contenedor = getContentPane();
+      contenedor.setLayout(new FlowLayout());
+      label1 = new JLabel("Numero 1: ");
+         num1 = new JTextField(10);
+         contenedor.add(label1);
+      label2 = new JLabel("Numero 2: ");
+         num2 = new JTextField(10);
+         contenedor.add(label2);
+         
+   //Creacion de los botones/campos
+      botonSuma = new JButton("+");
+      contenedor.add(botonSuma);
+      botonSuma.addActionListener(this);
+      
+      botonResta = new JButton("-");
+      contenedor.add(botonResta);
+      botonResta.addActionListener(this);
+
+      botonMulti = new JButton("*");
+      contenedor.add(botonMulti);
+      botonMulti.addActionListener(this);
+      
+      botonDivi = new JButton("/");
+      contenedor.add(botonDivi);
+      botonDivi.addActionListener(this);
+      
+      resultado = new JTextField(10);
+      contenedor.add(resultado);
+      
+      botonLimpiar = new JButton("Limpiar");
+      contenedor.add(botonLimpiar);
+      botonLimpiar.addActionListener(this);
+      
+      botonSalir = new JButton("Salir");
+      contenedor.add(botonSalir);
+      botonSalir.addActionListener(this);
+         
+   }//interfaz method
+
+
+}//class
