@@ -1,8 +1,8 @@
-public class principalCalculadoraTopicos{
-	public static void main(String args[]){
-   
-		calculadoraTopicos acceder = new calculadoraTopicos();
-	   acceder.setVisible(true);
-	
+//Brian Osvaldo Vega Rodriguez 19290965
+public class principalCalculadoraTopicosV2{
+   public static void main(String[] args) {
+      //JFrame.setDefaultLookAndFeelDecorated(true);
+      calculadoraTopicosV2 acceder = new calculadoraTopicosV2();//Instanciamos la clase que creamos
+      
    }//main
 }//class
